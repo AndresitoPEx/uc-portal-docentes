@@ -1,1 +1,37 @@
-<p>login works!</p>
+<main class="login">
+  <div class="login-left">
+    <img src="assets/imgs/innovation-login.png" width="600px" height="auto">
+  </div>
+
+  <div class="login-right">
+    <div class="login-form">
+      <h2 class="login-title">¡Bienvenido!</h2>
+
+      <!-- <div class="login-form-item">
+        <label class="login-label" for="email-login">Usuario</label>
+        <input type="email" class="login-text" placeholder="usuario@email.com" [(ngModel)]="email">
+        <i class="login-btn-rel pi pi-times" (click)="clearInputText('email')"></i>
+      </div>
+
+      <div class="login-form-item">
+        <label class="login-label" for="password-login">Contraseña</label>
+        <input [type]="passType" class="login-text" placeholder="Contraseña" [(ngModel)]="password">
+        <i class="bi bi-eye login-btn-rel" (click)="changePassType()" *ngIf="password !== ''"></i>
+      </div> -->
+
+      <div class="login-submit">
+        <button [disabled]="email === '' || password === '' || loading" (click)="loginWithEmail()">INICIAR SESIÓN</button>
+        <span *ngIf="error">{{ error }}</span>
+      </div>
+
+      <br>
+
+      <!-- Google login temporalmente inhabilitado -->
+      <!--
+      <div class="login-submit">
+        <button [disabled]="loading" (click)="loginWithGoogle()">INICIAR SESIÓN CON GOOGLE</button>
+      </div>
+      -->
+    </div>
+  </div>
+</main>
